@@ -37,7 +37,7 @@ jobs:
         ls -ltra
         # Docker build command
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f clo835_summer2023_assignment1/Dockerfile .
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_DB -f /Assignment22/clo835_summer2023_assignment1/Dockerfile_mysql .
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_DB -f clo835_summer2023_assignment1/Dockerfile_mysql .
         
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_DB
