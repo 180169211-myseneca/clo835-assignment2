@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webpod
+  labels:
+    app: web
+spec:
+  containers:
+    - name: web-container
+      image: 976199020745.dkr.ecr.us-east-1.amazonaws.com/clo835_assigment2:myapp_v1.0
+      env:
+        - name: DBPORT
+          value: "3306"
+        - name: DBHOST
+          value: "mysqlservice.db.svc.cluster.local"
+        - name: DBUSER
+          value: "root"
+        - name: DATABASE
+          value: "employees"
+        - name: DBPWD
+          value: "tanatip1234"
+      ports:
+        - containerPort: 8080
