@@ -7,7 +7,6 @@ RUN set -xe \
     && apt-get install -y python3-pip \
     && apt-get install -y mysql-client 
 RUN pip install --upgrade pip
-RUN pip install -r clo835_summer2023_assignment1/requirements.txtrequirements.txt
-EXPOSE 8080
+RUN pip install -r clo835_summer2023_assignment1/requirements.txt
 ENTRYPOINT [ "python3" ]
 CMD [ "app.py" ]
